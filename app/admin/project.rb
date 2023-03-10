@@ -77,12 +77,13 @@ ActiveAdmin.register Project do
 
   controller do
     def create
+      comment_body = params[:project]['comments_attributes']['0'][:body] if params[:project]['comments_attributes'].present?
       project = Projects::EntryPoint.new(title: params[:project][:title],
                                    description: params[:project][:description],
                                    reference_number: params[:project][:reference_number],
                                    status: params[:project][:status],
                                    admin_user_id: current_admin_user.id,
-                                   comment_body: params[:comments]&&params[:comments][:body]).call
+                                   comment_body: comment_body).call
       redirect_to admin_project_path(project.id), flash: { notice: 'Created sucessfully' }
     rescue StandardError => e
       flash[:error] = "Error: #{e.message}"
