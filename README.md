@@ -47,3 +47,8 @@ My assumption is Yes. So I've defined the column project.admin_user_id  which wi
 
 
 Thanks for taking time to review my code.
+I've attached screenshots for reference. Please find the below
+
+<img width="1433" alt="Screenshot 2023-03-10 at 09 43 59" src="https://user-images.githubusercontent.com/20990144/224282696-da949d2e-5e3e-48cb-8718-de8f53f4dad3.png">
+
+<img width="1409" alt="Screenshot 2023-03-10 at 09 43 29" src="https://user-images.githubusercontent.com/20990144/224282673-6cbf4bd3-d4eb-4e2d-8243-f4a681dede36.png">
