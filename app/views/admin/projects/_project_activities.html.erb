@@ -1,0 +1,24 @@
+<div class="panel_contents charges-table">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <thead>
+      <tr>
+        <th class="col">Created at</th>
+        <th class="col">Change type</th>
+        <th class="col">Updated by</th>
+        <th class="col">Status</th>
+        <th class="col">Comment</th>
+      </tr>
+    <thead>
+    <tbody>
+      <% resource.project_activities.each do |activity| %>
+        <tr>
+          <td class="col"><b><%= activity.created_at %></b></td>
+          <td class="col"><b><%= activity.change_type.humanize %></b></td>
+          <td class="col"><b><%= link_to activity.admin_user.email, admin_admin_user_path(id: activity.admin_user.id) %></b></td>
+          <td class="col"><%= activity.status %></td>
+          <td class="col"><%= activity.comment.body if activity.comment.present? %> </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
