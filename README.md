@@ -14,9 +14,6 @@ This repo contains the code for project conversation history.
 * I've decoupled modules to reduce complexity and followed SOLID principles to use this code to build API's in future.
 * Added model validations and database indexes in order to make sure there will be no duplicate project records.
 
-<b>UI:</b>
-* In order to build a project dashboard and filters for quick UI I've chosen 'active_admin' gem instead of Tailwind CSS for now.
-
 
 <b>Configuration:</b>
 
